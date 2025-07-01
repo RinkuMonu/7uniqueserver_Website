@@ -8,7 +8,7 @@ import Plans from '@/components/Plans';
 import Faqs from '@/components/ui/faqs';
 import LatestBlog from '@/components/ui/latestblog';
 
-const PricingTable = () => {
+const Page = () => {
 
 
 const hostingFeatures = [
@@ -38,110 +38,7 @@ const hostingFeatures = [
   },
 ];
 
-const testimonials = [
-  {
-    quote:
-      'I am using Digital Ocean Plan in Cloud ways and I can confirm it is very good. Also, additional the backup with my hosting is awesome too.',
-    author: 'Jamie Knop',
-    role: 'Business Owner',
-    image: '/images/testimonials/author.png',
-  },
-  {
-    quote:
-      "I started my own web hosting business their reseller hosting plan, and it's been a great decision. The resources are ample, the management tools are easy to use.",
-    author: 'Jahed Khan',
-    role: 'Business Owner',
-    image: '/images/testimonials/author-2.png',
-  },
-  {
-    quote:
-      "I've been using their web hosting services for over a year now, and I happier. The uptime is fantastic, and the customer support team is always quick.",
-    author: 'Samira Khan',
-    role: 'Digital Marketer',
-    image: '/images/testimonials/author-3.png',
-  },
-  {
-    quote:
-      "I've been using their web hosting services for over a year now, and I happier. The uptime is fantastic, and the customer support team is always quick.",
-    author: 'Jamie Knop',
-    role: 'Business Owner',
-    image: '/images/testimonials/author.png',
-  },
-];
 
-const features1 = [
-  {
-    icon: '/images/feature/feature-01.svg',
-    title: 'Free WHM & cPanel',
-    description: "We guarantee it you don't have to worry about it.",
-  },
-  {
-    icon: '/images/feature/feature-02.svg',
-    title: 'Performance Optimized',
-    description: 'If your website is slow or down then you losing customers.',
-  },
-  {
-    icon: '/images/feature/feature-03.svg',
-    title: 'Super Easy to Use',
-    description: 'Our custom control panel to use and removes the headache',
-  },
-  {
-    icon: '/images/feature/feature-04.svg',
-    title: '24/7 Expert Support',
-    description: 'Our custom control panel to use and removes the headache',
-  },
-];
-
-const blogs = [
-  {
-    image: '/images/blog/blog-1.webp',
-    category: 'Web Hosting',
-    date: '19 Sep, 2023',
-    title: 'Attentive was born in 2015 help sales teams VPS hosting',
-    authorImg: '/images/author/author__one.png',
-    authorName: 'Mack jon',
-    authorRole: 'Developer & Web serenity',
-    link: '/blog-details',
-  },
-  {
-    image: '/images/blog/blog-2.webp',
-    category: 'Web Hosting',
-    date: '19 Sep, 2023',
-    title: 'Attentive was born in 2015 help sales teams VPS hosting',
-    authorImg: '/images/author/author__two.png',
-    authorName: 'Ahmad Eamin',
-    authorRole: 'Developer',
-    link: '/blog-details',
-  },
-  {
-    image: '/images/blog/blog-3.webp',
-    category: 'Web Hosting',
-    date: '19 Sep, 2023',
-    title: 'Attentive was born in 2015 help sales teams VPS hosting',
-    authorImg: '/images/author/author__four.png',
-    authorName: 'Samira Khan',
-    authorRole: 'Digital Marketer',
-    link: '/blog-details',
-  },
-];
-
-const features2 = [
-  {
-    icon: '/images/feature/feature-08.svg',
-    title: 'Live Chat',
-    description: 'Our knowledgeable and friendly representatives are available 24/7',
-  },
-  {
-    icon: '/images/feature/feature-09.svg',
-    title: 'Knowledge Base',
-    description: 'Access a wealth of information and resources with our comprehensive',
-  },
-  {
-    icon: '/images/feature/feature-11.svg',
-    title: 'Send Ticket',
-    description: 'Our ticketing system is designed to provide you with efficient',
-  },
-];
 
   const resellerHostingServices = [
   {
@@ -263,10 +160,9 @@ const features2 = [
     </div>
 
 
-   
-      {/* Newsletter Area End */}
-     <section className="py-5 bg-light">
-                <div className="container">
+
+     <section className=" bg-light " style={{"paddingTop":"110px" , "paddingBottom":"110px"}}>
+                <div className="container"  >
                     <h2 className="text-center mb-5 text-black fw-bold">Additional Reseller Hosting Services</h2>
                     <div className="row g-4">
                         {resellerHostingServices.map((section, idx) => (
@@ -290,9 +186,12 @@ const features2 = [
                         ))}
                     </div>
                 </div>
+                   <div className="d-flex justify-content-center mt-5 ">
+                              <a href="#" className='get-started-btn px-4'>Buy Now</a>
+                            </div>
             </section>
   </>
   );
 };
 
-export default PricingTable;
+export default Page;

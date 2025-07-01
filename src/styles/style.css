@@ -25389,3 +25389,13 @@
   }
   /*# sourceMappingURL=../maps/style.css.map */
   
+  .get-started-btn{
+        font-weight: var(--bold);
+    color: var(--body-bg);
+    background: var(--color-primary);
+    border-radius: 6px;
+    max-width: 100%;
+    padding: 13px 0;
+    text-decoration: none;
+    display: block;
+  }

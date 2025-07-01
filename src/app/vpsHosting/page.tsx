@@ -1,7 +1,15 @@
-import Plans from '@/components/Plans'
-import React from 'react'
+"use client"
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-function Page() {
+import Testimonials from '@/components/ui/testimonials';
+import Plans from '@/components/Plans';
+import Faqs from '@/components/ui/faqs';
+import LatestBlog from '@/components/ui/latestblog';
+
+const Page = () => {
+
 
     const features = [
         {
@@ -26,71 +34,85 @@ function Page() {
         },
     ];
 
-    const serviceSections = [
-        {
-            title: "Security",
-            items: [
-                { id: "ddosProtection", label: "DDoS Protection (₹1000/month)" },
-                { id: "sslCert", label: "SSL Certificate (₹500/year)" },
-                { id: "firewall", label: "Firewall Management (₹1200/month)" },
-            ],
-        },
-        {
-            title: "Performance",
-            items: [
-                { id: "cdn", label: "CDN Integration (₹800/month)" },
-                { id: "caching", label: "Caching Setup (₹700 one-time)" },
-                { id: "monitoring", label: "Resource Monitoring (₹500/month)" },
-            ],
-        },
-        {
-            title: "Support",
-            items: [
-                { id: "prioritySupport", label: "24/7 Priority Support (₹1500/month)" },
-                { id: "accountManager", label: "Dedicated Account Manager (₹2000/month)" },
-                { id: "migration", label: "Site Migration Support (₹1000 one-time)" },
-            ],
-        },
-        {
-            title: "Add-ons",
-            items: [
-                { id: "ipAddress", label: "Extra IP Address (₹300/month)" },
-                { id: "cpanel", label: "cPanel License (₹1200/month)" },
-                { id: "backups", label: "Daily Backups (₹800/month)" },
-            ],
-        },
-    ];
 
-    return (
-        <>
-            <div className="rts-breadcrumb-area body-bg-2">
-                <div className="container">
-                    <div className="breadcrumb-inner">
-                        <div className="row align-items-center">
-                            <div className="col-lg-6 order-change">
-                                <div className="breadcrumb-content">
-                                    <h1 className="heading-title" style={{ maxWidth: "494px" }}>
-                                        Dedicated Server
-                                    </h1>
-                                    <p className="desc">Control and flexibility when your business needs it</p>
-                                </div>
-                            </div>
-                            <div className="col-lg-6">
-                                <div className="breadcrumb-image-area">
-                                    <img src="/images/banner/breadcrumb-04.webp" width="310" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="breadcrumb-shape-area">
-                    <img src="/images/banner/breadcrumb-shape.svg" alt="" />
-                </div>
+
+
+
+const vpsHostingServices = [
+  {
+    title: "Performance",
+    items: [
+      { id: "cpuUpgrade", label: "CPU Upgrade (₹500/month per core)" },
+      { id: "ramUpgrade", label: "RAM Upgrade (₹400/month per GB)" },
+      { id: "ssdStorage", label: "Additional SSD Storage (₹300/month per 20GB)" },
+    ],
+  },
+  {
+    title: "Security",
+    items: [
+      { id: "ddos", label: "Advanced DDoS Protection (₹1000/month)" },
+      { id: "managedFirewall", label: "Managed Firewall (₹1200/month)" },
+      { id: "serverHardening", label: "Server Hardening (₹1500 one-time)" },
+    ],
+  },
+  {
+    title: "Management",
+    items: [
+      { id: "fullyManaged", label: "Fully Managed VPS (₹2000/month)" },
+      { id: "controlPanel", label: "Control Panel Setup (₹800/month)" },
+      { id: "osReinstall", label: "OS Reinstall Assistance (₹500 one-time)" },
+    ],
+  },
+  {
+    title: "Add-ons",
+    items: [
+      { id: "snapshots", label: "Snapshot Backups (₹700/month)" },
+      { id: "ipv6", label: "IPv6 Support (Free)" },
+      { id: "extraIp", label: "Additional IP (₹250/month)" },
+    ],
+  },
+];
+
+  return (
+  <>
+     <div className="rts-breadcrumb-area body-bg-2">
+      <div className="container">
+        <div className="breadcrumb-inner">
+          <div className="row align-items-center">
+            <div className="col-lg-6 order-change">
+              <div className="breadcrumb-content">
+                
+                 <h1 className="heading-title" style={{ maxWidth: '477px' }}>VPS Hosting</h1>
+                            <p className="desc">Control and flexibility when your business needs it</p>
+              </div>
             </div>
+            <div className="col-lg-6">
+              <div className="breadcrumb-image-area">
+                <Image
+                  src="/images/banner/breadcrumb-04.webp"
+                  width={332}
+                  height={590}
+                  alt="Reseller Hosting"
+                  layout="intrinsic"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="breadcrumb-shape-area">
+        <Image
+          src="/images/banner/breadcrumb-shape.svg"
+          width={500}
+          height={500}
+          alt="Breadcrumb Shape"
+        />
+      </div>
+    </div>
 
-            <Plans />
+   <Plans/>
 
-            <section className="rts-feature section__padding">
+   <section className="rts-feature section__padding">
                 <div className="container">
                     <div className="row">
                         <div className="rts-section text-center">
@@ -115,11 +137,13 @@ function Page() {
                 </div>
             </section>
 
-            <section className=" bg-light" style={{"paddingTop":"110px" , "paddingBottom":"110px"}}>
-                <div className="container">
-                    <h2 className="text-center mb-5 text-black fw-bold">Additional Dedicated Hosting Services</h2>
+
+
+     <section className=" bg-light " style={{"paddingTop":"110px" , "paddingBottom":"110px"}}>
+                <div className="container"  >
+                    <h2 className="text-center mb-5 text-black fw-bold">Additional VPS Hosting Services</h2>
                     <div className="row g-4">
-                        {serviceSections.map((section, idx) => (
+                        {vpsHostingServices.map((section, idx) => (
                             <div className="col-md-3" key={idx}>
                                 <div className="bg-white  border-4 rounded-3 shadow-md p-4 h-100" style={{"borderLeft":"2px solid #fd5d07"}}>
                                     <h5 className="fw-bold mb-4 fs-4  text-uppercase ">{section.title}</h5>
@@ -140,14 +164,12 @@ function Page() {
                         ))}
                     </div>
                 </div>
-                  <div className="d-flex justify-content-center mt-5 ">
+                   <div className="d-flex justify-content-center mt-5 ">
                               <a href="#" className='get-started-btn px-4'>Buy Now</a>
                             </div>
             </section>
+  </>
+  );
+};
 
-
-        </>
-    )
-}
-
-export default Page
+export default Page;

@@ -119,7 +119,7 @@ const wordpressHostingServices = [
 
 
 
- <section className="py-5 bg-light">
+ <section className=" bg-light" style={{"paddingTop":"110px" , "paddingBottom":"110px"}}>
                 <div className="container">
                     <h2 className="text-center mb-5 text-black fw-bold">Additional WordPress Hosting Services</h2>
                     <div className="row g-4">
@@ -144,6 +144,9 @@ const wordpressHostingServices = [
                         ))}
                     </div>
                 </div>
+                  <div className="d-flex justify-content-center mt-5 ">
+                              <a href="#" className='get-started-btn px-4'>Buy Now</a>
+                            </div>
             </section>
 
     </>
