@@ -9347,13 +9347,7 @@
     border-color: var(--color-primary);
   }
   
-  button,
-  [type=button],
-  [type=reset],
-  [type=submit] {
-    -webkit-appearance: button;
-  }
-  
+
   input {
     height: 40px;
     padding: 0 15px;
@@ -10190,25 +10184,21 @@
   input:-moz-placeholder,
   textarea:-moz-placeholder {
     opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
   
   input::-webkit-input-placeholder,
   textarea::-webkit-input-placeholder {
     opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
   
   input::-moz-placeholder,
   textarea::-moz-placeholder {
     opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
   
   input:-ms-input-placeholder,
   textarea:-ms-input-placeholder {
     opacity: 1;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   }
   
   /*=============================
@@ -11662,6 +11652,18 @@
     transform: translateY(-50%);
     font-family: "Font Awesome 6 Pro";
   }
+  .elitehost-menu .elitehost-desktop-menu .elitehost-has-dropdown .elitehost-dropdown-main-element::before {
+    content: "\f078";
+    position: absolute;
+    color: var(--color-secondary);
+    right: -20px;
+    top: 50%;
+    font-size: 12px;
+    transform: translateY(-50%);
+    font-family: "Font Awesome 6 Free"; /* IMPORTANT */
+    font-weight: 900; /* solid style icons */
+  }
+  
   @media (max-width: 1200px) {
     .elitehost-menu .elitehost-desktop-menu .elitehost-has-dropdown .elitehost-dropdown-main-element::before {
       right: -15px;
@@ -19057,7 +19059,6 @@
     margin: 0 auto;
     border-radius: 2px;
     position: relative;
-    -ms-touch-action: none;
     background: #147BFF;
   }
   .rts-testimonial-two .testimonial-slider-two .rts-swiper-scrollbar .swiper-scrollbar-drag {

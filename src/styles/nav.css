@@ -3120,9 +3120,6 @@
     list-style: none;
 }
 
-/* Additional header-specific overrides and sub-dropdown logic are large — can be separated if needed. */
-
-/* HEADER TOP CSS */
 
 .rts-ht__bg {
     background: var(--color-primary);
@@ -3155,8 +3152,6 @@
     }
 }
 
-.rts-ht__email {
-}
 
 @media (max-width: 991px) {
     .rts-ht__email {
@@ -3887,9 +3882,6 @@
       justify-content: center;
       gap: 15px;
     }
-  }
-  .rts-feature .rts-section__title {
-    /* We can't do media queries inside selectors in CSS, so define them separately below */
   }
   
   @media (max-width: 576px) {

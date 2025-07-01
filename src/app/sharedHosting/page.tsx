@@ -1,4 +1,6 @@
 "use client"
+import Faqs from '@/components/ui/faqs';
+import Testimonials from '@/components/ui/testimonials';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -82,16 +84,23 @@ const SharedHostingPage = () => {
       image: "/assets/images/testimonials/author.png"
     },
   ];
-
-  // FAQ data
-  const faqs = [
-    {
-      id: 'first',
-      question: 'Why buy a domain name from EliteHost?',
-      answer: 'Above all else, we strive to deliver outstanding customer experiences.'
-    },
-  
-  ];
+  const features2 = [
+  {
+    icon: '/images/feature/feature-08.svg',
+    title: 'Live Chat',
+    description: 'Our knowledgeable and friendly representatives are available 24/7',
+  },
+  {
+    icon: '/images/feature/feature-09.svg',
+    title: 'Knowledge Base',
+    description: 'Access a wealth of information and resources with our comprehensive',
+  },
+  {
+    icon: '/images/feature/feature-11.svg',
+    title: 'Send Ticket',
+    description: 'Our ticketing system is designed to provide you with efficient',
+  },
+];
 
   // Blog posts data
   const blogPosts = [
@@ -274,174 +283,39 @@ const SharedHostingPage = () => {
           </div>
         </div>
       </div>
+<Testimonials/>
 
-      {/* Testimonials */}
-      <section className="rts-testimonial area-2 section__padding">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 d-flex justify-content-center">
-              <div className="rts-section w-460 text-center">
-                <h2 className="rts-section__title">Our Client Feedback</h2>
-                <p className="rts-section__description">We're honored and humbled by the great feedback we receive from our customers.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="rts-testimonial__slider testimonial__slider--second">
-                <div className="swiper-wrapper">
-                  {testimonials.map((testimonial, index) => (
-                    <div key={index} className="swiper-slide">
-                      <div className="rts-testimonial__single2">
-                        <div className="quote-icon">
-                          <Image 
-                            src="/assets/images/testimonials/quote.svg" 
-                            width={30}
-                            height={30}
-                            alt="Quote"
-                          />
-                        </div>
-                        <div className="content">
-                          <p>{testimonial.quote}</p>
-                        </div>
-                        <div className="author__meta">
-                          <div className="author__meta--image">
-                            <Image 
-                              src={testimonial.image} 
-                              width={50}
-                              height={50}
-                              alt={testimonial.author}
-                            />
-                          </div>
-                          <div className="author__meta--details">
-                            <Link href="#">{testimonial.author}</Link>
-                            <span>{testimonial.role}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
 
-      {/* Blog Section */}
-      <section className="rts-blog pt--120 pb--60">
-        <div className="container">
-          <div className="row justify-content-center justify-content-md-start">
-            <div className="col-md-12 col-sm-10">
-              <div className="rts-section text-center">
-                <h2 className="rts-section__title">Latest Article</h2>
-              </div>
-            </div>
-          </div>
-          
-          <div className="row g-30 mb--60 justify-content-center justify-content-md-start">
-            {blogPosts.map((post, index) => (
-              <div key={index} className="col-lg-4 col-md-6 col-sm-10">
-                <div className="rts-blog__single">
-                  <Link href="blog-details">
-                    <Image 
-                      className="blog__thumb" 
-                      src={post.image} 
-                      width={400} 
-                      height={300} 
-                      alt={post.title} 
-                    />
-                  </Link>
-                  <div className="rts-blog__single--meta">
-                    <div className="cat__date">
-                      <Link href="#" className="cat">{post.category}</Link>
-                      <span className="date">{post.date}</span>
-                    </div>
-                    <Link href="blog-details" className="title">{post.title}</Link>
-                    <div className="rts-blog__single--author">
-                      <div className="author">
-                        <Image 
-                          src={post.author.image} 
-                          width={40} 
-                          height={40} 
-                          alt={post.author.name} 
+   <Faqs/>
+
+   <section className="rts-hosting-feature-area-2 section__padding">
+          <div className="container">
+            <div className="section-inner">
+              <div className="row g-5">
+                {features2.map((feature, index) => (
+                  <div className="col-xl-4 col-lg-6" key={index}>
+                    <div className="feature-wrapper">
+                      <div className="icon">
+                        <Image
+                          src={feature.icon}
+                          alt={feature.title}
+                          width={60}
+                          height={60}
                         />
                       </div>
-                      <div className="author__content">
-                        <Link href="#">{post.author.name}</Link>
-                        <span>{post.author.role}</span>
+                      <div className="text">
+                        <h4 className="title">{feature.title}</h4>
+                        <p className="desc">{feature.description}</p>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="rts-hosting-faq">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <div className="rts-section text-center">
-                <h2 className="rts-section__title mb-0">Frequently asked questions</h2>
-              </div>
-              <div className="rts-faq__accordion">
-                <div className="accordion accordion-flush" id="rts-accordion">
-                  {faqs.map((faq, index) => (
-                    <div key={faq.id} className={`accordion-item ${index === 0 ? 'active' : ''}`}>
-                      <div className="accordion-header" id={faq.id}>
-                        <h4 className={`accordion-button ${index === 0 ? 'collapse show' : 'collapsed'}`}>
-                          {faq.question}
-                        </h4>
-                      </div>
-                      <div 
-                        id={`item__${faq.id}`} 
-                        className={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`}
-                      >
-                        <div className="accordion-body">
-                          {faq.answer}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                ))}
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Support Features */}
-      <section className="rts-hosting-feature-area-2 section__padding">
-        <div className="container">
-          <div className="section-inner">
-            <div className="row g-5">
-              {supportFeatures.map((feature, index) => (
-                <div key={index} className="col-xl-4 col-lg-6">
-                  <div className="feature-wrapper">
-                    <div className="icon">
-                      <Image 
-                        src={feature.icon} 
-                        width={50}
-                        height={50}
-                        alt={feature.title}
-                      />
-                    </div>
-                    <div className="text">
-                      <h4 className="title">{feature.title}</h4>
-                      <p className="desc">{feature.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+        {/* Hosting Feature End */}
 
       {/* Newsletter */}
       <div className="rts-newsletter">

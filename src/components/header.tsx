@@ -86,7 +86,7 @@ const Header = () => {
                   <ul className="list-unstyled elitehost-desktop-menu">
                     {/* Home */}
                     <li className="menu-item elitehost-has-dropdown">
-                      <Link href="#" className="elitehost-dropdown-main-element">Home</Link>
+                      <Link href="#" className="elitehost-dropdown-main-element">Home </Link>
                       <div className="has-homemenu">
                         <div className="row gx-5 row-cols-1 row-cols-md-2 row-cols-lg-4 row-cols-xl-6">
                           {[1, 2, 3, 4, 5, 6].map((i) => (

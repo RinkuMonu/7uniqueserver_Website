@@ -2,43 +2,12 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+
+import Testimonials from '@/components/ui/testimonials';
 import Plans from '@/components/Plans';
+import Faqs from '@/components/ui/faqs';
 
 const PricingTable = () => {
-
-const faqItems = [
-  {
-    id: 'one',
-    question: 'Why buy a domain name from EliteHost?',
-    answer:
-      'Above all else, we strive to deliver outstanding customer experiences. When you buy a domain name from EliteHost, we guarantee it will be handed over.',
-    expanded: true,
-  },
-  {
-    id: 'two',
-    question: 'How does domain registration work?',
-    answer:
-      'Above all else, we strive to deliver outstanding customer experiences. When you buy a domain name from EliteHost, we guarantee it will be handed over.',
-  },
-  {
-    id: 'three',
-    question: 'Why is domain name registration required?',
-    answer:
-      'Above all else, we strive to deliver outstanding customer experiences. When you buy a domain name from EliteHost, we guarantee it will be handed over.',
-  },
-  {
-    id: 'four',
-    question: 'Why is domain name registration required?',
-    answer:
-      'Above all else, we strive to deliver outstanding customer experiences. When you buy a domain name from EliteHost, we guarantee it will be handed over.',
-  },
-  {
-    id: 'five',
-    question: 'Why is domain name registration required?',
-    answer:
-      'Above all else, we strive to deliver outstanding customer experiences. When you buy a domain name from EliteHost, we guarantee it will be handed over.',
-  },
-];
 
 
 const hostingFeatures = [
@@ -173,11 +142,6 @@ const features2 = [
   },
 ];
 
- useEffect(() => {
-    typeof window !== 'undefined' &&
-      require('bootstrap/dist/js/bootstrap.bundle.min.js');
-  }, []);
-
   
   return (
   <>
@@ -262,83 +226,9 @@ const features2 = [
       </div>
     </div>
 
-    <section className="rts-testimonial area-2 section__padding body-bg-2">
-      <div className="container">
-        <div className="row ">
-          <div className="col-12 d-flex justify-content-center">
-            <div className="rts-section w-460 text-center">
-              <h2 className="rts-section__title">Our Client Feedback</h2>
-              <p className="rts-section__description">
-                We’re honored and humbled by the great feedback we receive from our customers on a daily basis.
-              </p>
-            </div>
-          </div>
-        </div>
+  <Testimonials/>
 
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="rts-testimonial__slider testimonial__slider--second">
-              <div className="swiper-wrapper">
-                {testimonials.map((t, i) => (
-                  <div className="swiper-slide" key={i}>
-                    <div className="rts-testimonial__single2">
-                      <div className="quote-icon">
-                        <Image
-                          src="/images/testimonials/quote.svg"
-                          alt="Quote Icon"
-                          width={40}
-                          height={40}
-                        />
-                      </div>
-                      <div className="content">
-                        <p>{t.quote}</p>
-                      </div>
-                      <div className="author__meta">
-                        <div className="author__meta--image">
-                          <Image src={t.image} alt={t.author} width={50} height={50} />
-                        </div>
-                        <div className="author__meta--details">
-                          <Link href="#">{t.author}</Link>
-                          <span>{t.role}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
 
-              {/* pagination dot */}
-              <div className="rts-dot__button slider-center"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-<section className="rts-feature section__padding body-bg-2">
-      <div className="container">
-        <div className="row">
-          <div className="rts-section text-center">
-            <h2 className="rts-section__title">Why EliteHost</h2>
-          </div>
-        </div>
-        <div className="row gy-30">
-          {features1.map((feature, index) => (
-            <div className="col-xl-3 col-lg-6 col-md-6" key={index}>
-              <div className="single__feature">
-                <div className="single__feature--box">
-                  <div className="single__feature--box-icon">
-                    <Image src={feature.icon} alt={feature.title} width={60} height={60} />
-                  </div>
-                  <h5 className="single__feature--box-title">{feature.title}</h5>
-                  <p className="single__feature--box-description">{feature.description}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
 
      <section className="rts-blog pt--120 pb--60">
       <div className="container">
@@ -391,47 +281,7 @@ const features2 = [
     </section>
 
 
-    <section className="rts-hosting-faq">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-lg-8">
-            <div className="rts-section text-center">
-              <h2 className="rts-section__title mb-0">Frequently asked questions</h2>
-            </div>
-            <div className="rts-faq__accordion">
-              <div className="accordion accordion-flush" id="rts-accordion">
-                {faqItems.map((item, index) => (
-                  <div
-                    className={`accordion-item ${item.expanded ? 'active' : ''}`}
-                    key={index}
-                  >
-                    <div className="accordion-header" id={`heading-${item.id}`}>
-                      <h4
-                        className={`accordion-button ${item.expanded ? '' : 'collapsed'}`}
-                        data-bs-toggle="collapse"
-                        data-bs-target={`#item__${item.id}`}
-                        aria-expanded={item.expanded ? 'true' : 'false'}
-                        aria-controls={`item__${item.id}`}
-                      >
-                        {item.question}
-                      </h4>
-                    </div>
-                    <div
-                      id={`item__${item.id}`}
-                      className={`accordion-collapse collapse ${item.expanded ? 'show' : ''}`}
-                      aria-labelledby={`heading-${item.id}`}
-                      data-bs-parent="#rts-accordion"
-                    >
-                      <div className="accordion-body">{item.answer}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<Faqs/>
 
     <section className="rts-hosting-feature-area-2 section__padding">
         <div className="container">
