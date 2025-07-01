@@ -193,7 +193,7 @@ function Plans() {
                     <tr>
                       <th className="package__left">
                         <Image 
-                          src="/assets/images/pricing/pricing-image.svg" 
+                          src="/images/pricing/pricing-image.svg" 
                           alt="Pricing" 
                           width={100} 
                           height={100}
