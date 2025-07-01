@@ -21991,7 +21991,8 @@
   }
   .rts-faq__accordion .accordion .accordion-item {
     padding: 0 25px 30px 25px;
-    border-bottom: 1px solid #FFE2CF;
+    border-bottom: 1px solid #FFE2CF !important;
+    border:none;
     background: none;
     transition: var(--transition);
   }
@@ -22003,6 +22004,39 @@
       padding: 23px 15px;
     }
   }
+  #side-bar {
+    display: none;
+  }
+  .side-bar {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    overflow-y: auto;
+  }
+  
+  .side-bar.open {
+    right: 0;
+  }
+  
+  .close-icon-menu {
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin: 20px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 991px) {
+    #side-bar {
+      display: block;
+    }
+  }
+  
   .rts-faq__accordion .accordion .accordion-item .accordion-header .accordion-button {
     cursor: pointer;
     font-size: 20px;
@@ -22017,7 +22051,7 @@
     box-shadow: none;
   }
   .rts-faq__accordion .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
-    content: "\f068";
+    content: "-";
     font-family: var(--fontawesome);
   }
   .rts-faq__accordion .accordion .accordion-item .accordion-header .accordion-button::after {
@@ -22050,6 +22084,7 @@
   
   .rts-hosting-faq {
     --faq-accordion: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #F4F9FF 100%);
+      margin: 50px 0px;
   }
   .rts-hosting-faq.wordpress {
     background: none;
@@ -25235,7 +25270,10 @@
   [data-theme=dark] .rts-dark-light i.fa-moon {
     display: none;
   }
-  
+  .accordion-button:focus{
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
   /*
     INDEX ELEVEN SCSS
   */

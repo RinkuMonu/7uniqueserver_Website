@@ -7,8 +7,8 @@ import SecureManagement from "@/components/ui/securemanagement";
 import EliteHostFeatureArea from "@/components/ui/elitehostingfeaturearea";
 import Testimonials from "@/components/ui/testimonials";
 import LatestBlog from "@/components/ui/latestblog";
-import HostingFaq from "@/components/ui/hostingfaq";
 import Newsletter from "@/components/ui/newsletter";
+import Faqs from "@/components/ui/faqs";
 
 
 export default function Home() {
@@ -23,7 +23,7 @@ export default function Home() {
       <EliteHostFeatureArea />  
       <Testimonials />
       <LatestBlog />
-      <HostingFaq />
+      <Faqs />
       <Newsletter />
     </>
   );

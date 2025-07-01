@@ -20926,6 +20926,7 @@ header.heder-two .sub-dropdown .submenu.third-lvl.base {
 
 .rts-hosting-faq {
   --faq-accordion: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #F4F9FF 100%);
+
 }
 .rts-hosting-faq .rts-faq__accordion .accordion .accordion-item.active {
   background: var(--faq-accordion);

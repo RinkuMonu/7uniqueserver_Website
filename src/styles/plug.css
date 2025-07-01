@@ -5918,7 +5918,6 @@ fieldset:disabled .btn {
 
 .accordion-item {
     background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, .125)
 }
 
 .accordion-item:first-of-type {
