@@ -14,6 +14,7 @@ import "@/styles/reset.css";
 import "@/styles/typography.css"
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Header from "@/components/header";
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
