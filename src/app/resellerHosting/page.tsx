@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Testimonials from '@/components/ui/testimonials';
 import Plans from '@/components/Plans';
 import Faqs from '@/components/ui/faqs';
+import LatestBlog from '@/components/ui/latestblog';
 
 const PricingTable = () => {
 
@@ -224,64 +225,17 @@ const features2 = [
           </div>
         </div>
       </div>
+
     </div>
 
   <Testimonials/>
 
 
-
-     <section className="rts-blog pt--120 pb--60">
-      <div className="container">
-        <div className="row justify-content-center justify-content-md-start">
-          <div className="col-md-12 col-sm-10">
-            <div className="rts-section text-center">
-              <h2 className="rts-section__title">Latest Article</h2>
-            </div>
-          </div>
-        </div>
-
-        <div className="row g-30 mb--60 justify-content-center justify-content-md-start">
-          {blogs.map((blog, index) => (
-            <div className="col-lg-4 col-md-6 col-sm-10" key={index}>
-              <div className="rts-blog__single">
-                <Link href={blog.link}>
-                  <Image
-                    className="blog__thumb"
-                    src={blog.image}
-                    alt="blog post thumb"
-                    width={370}
-                    height={240}
-                  />
-                </Link>
-                <div className="rts-blog__single--meta">
-                  <div className="cat__date">
-                    <Link href="#" className="cat">
-                      {blog.category}
-                    </Link>
-                    <span className="date">{blog.date}</span>
-                  </div>
-                  <Link href={blog.link} className="title">
-                    {blog.title}
-                  </Link>
-                  <div className="rts-blog__single--author">
-                    <div className="author">
-                      <Image src={blog.authorImg} alt={blog.authorName} width={40} height={40} />
-                    </div>
-                    <div className="author__content">
-                      <Link href="#">{blog.authorName}</Link>
-                      <span>{blog.authorRole}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-
+<LatestBlog/>
 
 <Faqs/>
+
+
 
     <section className="rts-hosting-feature-area-2 section__padding">
         <div className="container">
