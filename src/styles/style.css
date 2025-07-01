@@ -13118,14 +13118,14 @@
     background-repeat: no-repeat;
   }
   .hero__banner.banner__background {
-    background-image: url(/public/images/index-11/banner__background.svg);
+    background-image: url(/images/index-11/banner__background.svg);
   }
   .hero__banner.banner__background-2 {
-    background-image: url(/public/images/banner/banner-bg-2.webp);
+    background-image: url(/images/banner/banner-bg-2.webp);
     background-color: unset;
   }
   .hero__banner.banner__background-3 {
-    background-image: url(/public/images/banner/banner-bg-6.webp);
+    background-image: url(/images/banner/banner-bg-6.webp);
     background-color: var(--color-secondary);
   }
   .hero__banner.banner__background-4 {
@@ -13668,7 +13668,7 @@
     height: 100%;
     width: 100%;
     content: "";
-    background-image: url(/public/images/banner/banner_home_one_dotted.svg);
+    background-image: url(/images/banner/banner_home_one_dotted.svg);
     background-position: center;
     opacity: 0.4;
     background-repeat: repeat;
@@ -13939,7 +13939,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(/public/images/banner/two/shape__one.png);
+    background-image: url(/images/banner/two/shape__one.png);
   }
   .rts-hero-two::after {
     position: absolute;
@@ -13951,7 +13951,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(/public/images/banner/two/shape__two.svg);
+    background-image: url(/images/banner/two/shape__two.svg);
   }
   .rts-hero-two__bg {
     background: linear-gradient(259deg, #006CF5 7.09%, #0559D9 71.14%);
@@ -14233,7 +14233,7 @@
     height: 100%;
     width: 100%;
     content: "";
-    background-image: url(/public/images/banner/banner-hero-four-bg.svg);
+    background-image: url(/images/banner/banner-hero-four-bg.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -14622,7 +14622,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(/public/images/banner/shared/banner__bg.svg);
+    background-image: url(/images/banner/shared/banner__bg.svg);
   }
   .rts-hosting-banner .banner-area {
     display: flex;
@@ -15388,7 +15388,7 @@
     }
   }
   .rts-brand__bg--section {
-    background-image: url(/public//images/brand/brand-section.png);
+    background-image: url(//images/brand/brand-section.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -15492,7 +15492,7 @@
     height: 100%;
     width: 100%;
     content: "";
-    background-image: url(/public/images/domain/domain__finder__bg.svg);
+    background-image: url(/images/domain/domain__finder__bg.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -15689,7 +15689,7 @@
     height: 100%;
     width: 100%;
     content: "";
-    background-image: url(/public/images/support/support__bg.svg);
+    background-image: url(/images/support/support__bg.svg);
     background-repeat: no-repeat;
     background-position: 54% 60%;
     z-index: -1;
@@ -15706,7 +15706,7 @@
     height: 100%;
     width: 100%;
     content: "";
-    background-image: url(/public/images/support/support__bg.svg);
+    background-image: url(/images/support/support__bg.svg);
     background-repeat: no-repeat;
     background-position: 54% 60%;
     z-index: -1;
@@ -15837,7 +15837,7 @@
     }
   }
   .rts-hero.game-banner::before {
-    background-image: url(/public/images/banner/banner__bg__game.jpg);
+    background-image: url(/images/banner/banner__bg__game.jpg);
     position: absolute;
     left: 0;
     top: 0;
@@ -15892,7 +15892,7 @@
   }
   
   .popular-game {
-    background-image: url(/public/images/game/game__server__bg.svg);
+    background-image: url(/images/game/game__server__bg.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -16359,7 +16359,7 @@
     font-weight: 600;
   }
   .rts-hero.cloud-banner::before {
-    background-image: url(/public/images/banner/banner__eight__shape.svg);
+    background-image: url(/images/banner/banner__eight__shape.svg);
     position: absolute;
     left: 0;
     top: 0;
@@ -16377,7 +16377,7 @@
     }
   }
   .rts-hero.cloud-banner::after {
-    background-image: url(/public/images/banner/banner__eight__image.png);
+    background-image: url(/images/banner/banner__eight__image.png);
     position: absolute;
     left: -130px;
     top: 0;
@@ -16465,7 +16465,7 @@
   }
   
   .rts-hero.wp__banner {
-    padding: 330px 0 240px;
+    padding: 226px 0 240px;
   }
   .rts-hero.wp__banner .hero__banner__wrapper {
     padding: 0;
@@ -17009,7 +17009,7 @@
     height: 100%;
     width: 100%;
     content: "";
-    background-image: url(/public/images/pricing/plan__hover__bg.png);
+    background-image: url(/images/pricing/plan__hover__bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -17508,7 +17508,7 @@
     height: 100%;
     width: 100%;
     content: "";
-    background-image: url(/public/images/pricing/plan__hover__bg.png);
+    background-image: url(/images/pricing/plan__hover__bg.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -18476,7 +18476,7 @@
     width: 25%;
   }
   .rts-about-reseller .hosting-about-image-bg::after {
-    /* background-image: url(/public/images/about/resell/resell-img-bg.svg); */
+    /* background-image: url(/images/about/resell/resell-img-bg.svg); */
     height: 100%;
     width: 100%;
     position: absolute;
@@ -18646,7 +18646,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background-image: url(/public/images/counter__bg.svg);
+    background-image: url(/images/counter__bg.svg);
     content: "";
     background-size: cover;
     background-repeat: no-repeat;
@@ -19045,7 +19045,7 @@
     height: 100%;
     width: 100%;
     content: "";
-    background-image: url(/public/images/testimonials/bg__shape.svg);
+    background-image: url(/images/testimonials/bg__shape.svg);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -19105,7 +19105,7 @@
     height: 100%;
     width: 100%;
     content: "";
-    background-image: url(/public/images/testimonials/testimonial__two__bg.svg);
+    background-image: url(/images/testimonials/testimonial__two__bg.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -19406,7 +19406,7 @@
     height: 100%;
     width: 100%;
     content: "";
-    background-image: url(/public/images/testimonials/feedback__testimonial__single.svg);
+    background-image: url(/images/testimonials/feedback__testimonial__single.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -19487,7 +19487,7 @@
   }
   
   .rts-flash-sell__bg {
-    background-image: url(/public/images/service/flash-sale-bg.webp);
+    background-image: url(/images/service/flash-sale-bg.webp);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 50px;
@@ -19597,7 +19597,7 @@
   }
   .rts-flash-sell .single__sell::before {
     content: "";
-    background-image: url(/public/images/service/flash-sale.svg);
+    background-image: url(/images/service/flash-sale.svg);
     height: 100%;
     width: 100%;
     position: absolute;
@@ -20756,7 +20756,7 @@
     height: 100%;
     width: 100%;
     content: "";
-    background-image: url(/public/images/footer/footer__four__bg.svg);
+    background-image: url(/images/footer/footer__four__bg.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -20890,7 +20890,7 @@
   }
   .rts-footer.game-footer {
     background: linear-gradient(360deg, #0F1329 0%, #0B0F21 82.55%);
-    background-image: url(/public/images/game/footer__game__bg.svg);
+    background-image: url(/images/game/footer__game__bg.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -21195,7 +21195,7 @@
     height: 100%;
     width: 100%;
     content: "";
-    background-image: url(/public/images/cta/cta__two__bg.png);
+    background-image: url(/images/cta/cta__two__bg.png);
     background-position: 115%;
     background-repeat: no-repeat;
     background-size: 80%;
@@ -21351,7 +21351,7 @@
     height: 100%;
     width: 100%;
     content: "";
-    background-image: url(/public/images/newsletter__bg.svg);
+    background-image: url(/images/newsletter__bg.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -21434,7 +21434,7 @@
     height: 100%;
     width: 100%;
     content: "";
-    background-image: url(/public/images/contact/contact__shape__bg.svg);
+    background-image: url(/images/contact/contact__shape__bg.svg);
     background-repeat: no-repeat;
     z-index: -1;
     opacity: 0.8;
@@ -22523,7 +22523,7 @@
     height: 100%;
     width: 100%;
     content: "";
-    background-image: url(/public/images/domain/domain__finder__bg__four.svg);
+    background-image: url(/images/domain/domain__finder__bg__four.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -23424,7 +23424,7 @@
     height: 100%;
     width: 100%;
     content: "";
-    background-image: url(/public/images/flash__sell__banner__bg.svg);
+    background-image: url(/images/flash__sell__banner__bg.svg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
