@@ -199,7 +199,7 @@ const Header = () => {
                     <li className="menu-item elitehost-has-dropdown">
                       <Link href="#" className="elitehost-dropdown-main-element">Features</Link>
                       <ul className="elitehost-submenu list-unstyled menu-pages">
-                        <li className="nav-item"><Link href="https://hostie-whmcs.themewant.com/?systpl=elitehost" target="_blank" className="nav-link">WHMCS Template</Link></li>
+                        <li className="nav-item"><Link href="#" target="_blank" className="nav-link">WHMCS Template</Link></li>
                         <li className="nav-item"><Link href="https://hostie-whmcs.themewant.com/index.php/store/shared-hosting?systpl=elitehost" target="_blank" className="nav-link">Shared Hosting</Link></li>
                         <li className="nav-item"><Link href="https://hostie-whmcs.themewant.com/index.php/store/vps-hosting?systpl=elitehost" target="_blank" className="nav-link">VPS Hosting</Link></li>
                         <li className="nav-item"><Link href="https://hostie-whmcs.themewant.com/index.php/announcements?systpl=elitehost" target="_blank" className="nav-link">Announcement</Link></li>
@@ -233,7 +233,7 @@ const Header = () => {
                   </ul>
                 </li>
               </ul>
-              <a href="https://hostie-whmcs.themewant.com/?systpl=elitehost" className="login__btn" target="_blank" rel="noopener noreferrer">Client Area</a>
+              <a href="#" className="login__btn" target="_blank" rel="noopener noreferrer">Client Area</a>
               <button id="menu-btn" aria-label="Menu" className="mobile__active menu-btn">
                 <i className="fa-sharp fa-solid fa-bars"></i>
               </button>

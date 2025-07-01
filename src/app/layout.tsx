@@ -6,6 +6,11 @@ import "@/styles/bootstrap.css";
 import "@/styles/animation.css";
 import "@/styles/header.css";
 import "@/styles/nav.css";
+import "@/styles/forms.css";
+// import "@/styles/style2.css";
+import "@/styles/mobile.css"; 
+import '@/styles/site-elements.css'
+import "@/styles/reset.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Header from "@/components/header";
 

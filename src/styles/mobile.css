@@ -78,6 +78,18 @@
     position: absolute;
     border: none;
 }
+#anywhere-home {
+    cursor: url("/images/close.png");
+    background: #0e1013;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 500ms ease-in-out;
+    pointer-events: none;
+    z-index: 50;
+}
 
 .side-bar button i {
     color: #ffffff;
@@ -92,28 +104,6 @@
     font-size: 27px;
     background: var(--color-primary);
     font-weight: 300;
-}
-
-#anywhere-home {
-    cursor: url(../images/close.png), auto;
-    background: #0e1013;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 500ms ease-in-out;
-    pointer-events: none;
-    z-index: 50;
-}
-
-#anywhere-home.bgshow {
-    background: #0e1013;
-    opacity: 70%;
-    visibility: visible;
-    pointer-events: visible;
-    z-index: 999;
-    top: 0;
 }
 
 #menu-btn {

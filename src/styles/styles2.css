@@ -12582,9 +12582,9 @@ xclip
   background: var(--color-primary);
   font-weight: 300;
 }
-
+/* 
 #anywhere-home {
-  cursor: url(../images/close.png), auto;
+  cursor: url(/public/images/close.png), auto;
   background: #0e1013;
   position: fixed;
   width: 100%;
@@ -12603,7 +12603,7 @@ xclip
   pointer-events: visible;
   z-index: 999;
   top: 0;
-}
+} */
 
 #menu-btn {
   cursor: pointer;
