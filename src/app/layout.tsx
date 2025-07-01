@@ -15,6 +15,7 @@ import "@/styles/typography.css"
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Header from "@/components/header";
 import '@fortawesome/fontawesome-free/css/all.min.css'
+import Footer from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body className={`loaded ${geistSans.variable} ${geistMono.variable}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
