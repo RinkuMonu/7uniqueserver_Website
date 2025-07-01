@@ -11,6 +11,7 @@ import "@/styles/forms.css";
 import "@/styles/mobile.css"; 
 import '@/styles/site-elements.css'
 import "@/styles/reset.css";
+import "@/styles/typography.css"
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Header from "@/components/header";
 

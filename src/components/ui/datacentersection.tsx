@@ -18,7 +18,7 @@ const DataCenterSection = () => {
   ];
 
   return (
-    <div className="rts-data-center fix pb--120">
+    <div className="rts-data-center fix">
       <div className="container">
         <div className="row justify-content-center">
           <div className="rts-section w-790 text-center">
