@@ -13,6 +13,41 @@ const SharedHostingPage = () => {
   'Performance and Speed',
 ];
 
+const sharedHostingServices = [
+  {
+    title: "Security",
+    items: [
+      { id: "basicSSL", label: "Free Basic SSL Certificate (Included)" },
+      { id: "spamFilter", label: "Spam Filter for Email (₹300/month)" },
+      { id: "sharedFirewall", label: "Shared Firewall Protection (₹400/month)" },
+    ],
+  },
+  {
+    title: "Performance",
+    items: [
+      { id: "liteSpeed", label: "LiteSpeed Server (₹600/month)" },
+      { id: "phpSelector", label: "PHP Version Selector (Free)" },
+      { id: "speedBooster", label: "Speed Optimization Plugin (₹500 one-time)" },
+    ],
+  },
+  {
+    title: "Support",
+    items: [
+      { id: "sharedSupport", label: "Email Ticket Support (Free)" },
+      { id: "chatSupport", label: "Live Chat Support (₹300/month)" },
+      { id: "migrationSupport", label: "Migration Assistance (₹500 one-time)" },
+    ],
+  },
+  {
+    title: "Add-ons",
+    items: [
+      { id: "domainPrivacy", label: "Domain Privacy Protection (₹200/year)" },
+      { id: "extraStorage", label: "Extra 10GB Storage (₹400/month)" },
+      { id: "ftpAccess", label: "Unlimited FTP Accounts (Free)" },
+    ],
+  },
+];
+
 
 const hostingOptions = [
   {
@@ -164,7 +199,32 @@ const hostingOptions = [
     </div>
 
 
-
+ <section className="py-5 bg-light">
+                <div className="container">
+                    <h2 className="text-center mb-5 text-black fw-bold">Additional Shared Hosting Services</h2>
+                    <div className="row g-4">
+                        {sharedHostingServices.map((section, idx) => (
+                            <div className="col-md-3" key={idx}>
+                                <div className="bg-white  border-4 rounded-3 shadow-md p-4 h-100" style={{"borderLeft":"2px solid #fd5d07"}}>
+                                    <h5 className="fw-bold mb-4 fs-4  text-uppercase ">{section.title}</h5>
+                                    {section.items.map((item) => (
+                                        <div className="form-check mb-2" key={item.id}>
+                                            <input
+                                                className="form-check-input border border-dark bg-transparent shadow-none"
+                                                type="checkbox"
+                                                id={item.id}
+                                            />
+                                            <label className="form-check-label " htmlFor={item.id}>
+                                               <p className='fs-5'> {item.label}</p>
+                                            </label>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
     </div>
   );
 };

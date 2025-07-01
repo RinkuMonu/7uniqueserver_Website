@@ -143,7 +143,41 @@ const features2 = [
   },
 ];
 
-  
+  const resellerHostingServices = [
+  {
+    title: "Branding",
+    items: [
+      { id: "whiteLabel", label: "White-label Branding (Included)" },
+      { id: "customLogo", label: "Custom Logo Integration (₹500 one-time)" },
+      { id: "clientPanel", label: "Branded Client Panel (₹800/month)" },
+    ],
+  },
+  {
+    title: "Resource Management",
+    items: [
+      { id: "whmAccess", label: "WHM Access (Free)" },
+      { id: "accountLimits", label: "Account Limit Control (Free)" },
+      { id: "autoSuspend", label: "Auto Suspend Inactive Clients (₹300/month)" },
+    ],
+  },
+  {
+    title: "Support & Tools",
+    items: [
+      { id: "billingSoftware", label: "Billing Software Integration (₹1000/month)" },
+      { id: "ticketSystem", label: "Client Ticket System (₹700/month)" },
+      { id: "priorityResellerSupport", label: "Priority Reseller Support (₹1200/month)" },
+    ],
+  },
+  {
+    title: "Add-ons",
+    items: [
+      { id: "extraCpanel", label: "Additional cPanel License (₹100/month/client)" },
+      { id: "emailMarketing", label: "Email Marketing Tool (₹600/month)" },
+      { id: "dailyResellerBackup", label: "Automated Daily Backups (₹900/month)" },
+    ],
+  },
+];
+
   return (
   <>
      <div className="rts-breadcrumb-area body-bg-2">
@@ -228,71 +262,35 @@ const features2 = [
 
     </div>
 
-  <Testimonials/>
 
-
-<LatestBlog/>
-
-<Faqs/>
-
-
-
-    <section className="rts-hosting-feature-area-2 section__padding">
-        <div className="container">
-          <div className="section-inner">
-            <div className="row g-5">
-              {features2.map((feature, index) => (
-                <div className="col-xl-4 col-lg-6" key={index}>
-                  <div className="feature-wrapper">
-                    <div className="icon">
-                      <Image
-                        src={feature.icon}
-                        alt={feature.title}
-                        width={60}
-                        height={60}
-                      />
-                    </div>
-                    <div className="text">
-                      <h4 className="title">{feature.title}</h4>
-                      <p className="desc">{feature.description}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Hosting Feature End */}
-
-      {/* Newsletter Area */}
-      <div className="rts-newsletter">
-        <div className="container">
-          <div className="row">
-            <div className="rts-newsletter__box">
-              <div className="rts-newsletter__box--content">
-                <h3 className="title">Sign up for web hosting today!</h3>
-                <form action="#" className="newsletter__form">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    required
-                  />
-                  <button
-                    type="submit"
-                    className="btn__two secondary__bg secondary__color"
-                  >
-                    Subscribe
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+   
       {/* Newsletter Area End */}
-    
+     <section className="py-5 bg-light">
+                <div className="container">
+                    <h2 className="text-center mb-5 text-black fw-bold">Additional Reseller Hosting Services</h2>
+                    <div className="row g-4">
+                        {resellerHostingServices.map((section, idx) => (
+                            <div className="col-md-3" key={idx}>
+                                <div className="bg-white  border-4 rounded-3 shadow-md p-4 h-100" style={{"borderLeft":"2px solid #fd5d07"}}>
+                                    <h5 className="fw-bold mb-4 fs-4  text-uppercase ">{section.title}</h5>
+                                    {section.items.map((item) => (
+                                        <div className="form-check mb-2" key={item.id}>
+                                            <input
+                                                className="form-check-input border border-dark bg-transparent shadow-none"
+                                                type="checkbox"
+                                                id={item.id}
+                                            />
+                                            <label className="form-check-label " htmlFor={item.id}>
+                                               <p className='fs-5'> {item.label}</p>
+                                            </label>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
   </>
   );
 };
