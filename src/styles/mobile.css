@@ -410,3 +410,6 @@
 .sub-dropdown.active .sub-menu-link {
     color: var(--color-primary);
 }
+a {
+    text-decoration: none !important;
+}

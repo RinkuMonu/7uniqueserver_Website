@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "@/styles/style.css";
+import "@/styles/plug.css";
+import "@/styles/bootstrap.css";
+import "@/styles/animation.css";
+import "@/styles/header.css";
+import "@/styles/nav.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import Header from "@/components/header";
-import '@/styles/style.css'
-import '@/styles/plug.css'
-import '@/styles/bootstrap.css' 
-import '@/styles/animation.css'
-import '@/styles/header.css'
-import '@/styles/nav.css'
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,13 +26,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className="loaded">
-      <Header />
+      <body className={`loaded ${geistSans.variable} ${geistMono.variable}`}>
+        <Header />
         {children}
       </body>
     </html>
