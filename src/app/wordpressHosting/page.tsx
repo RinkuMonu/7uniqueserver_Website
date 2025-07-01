@@ -25,6 +25,42 @@ function Page() {
   },
 ];
 
+const wordpressHostingServices = [
+  {
+    title: "Security",
+    items: [
+      { id: "wpMalwareScan", label: "Malware Scanning for WP (₹600/month)" },
+      { id: "wpFirewall", label: "WordPress Firewall (₹800/month)" },
+      { id: "wpLoginGuard", label: "Login Protection & CAPTCHA (₹300/month)" },
+    ],
+  },
+  {
+    title: "Performance",
+    items: [
+      { id: "wpCache", label: "Advanced Caching (₹700/month)" },
+      { id: "imageCDN", label: "Image CDN + Compression (₹500/month)" },
+      { id: "lazyLoad", label: "Lazy Load Images (Free)" },
+    ],
+  },
+  {
+    title: "Support",
+    items: [
+      { id: "wpExpert", label: "WordPress Expert Help (₹1000/month)" },
+      { id: "themeSupport", label: "Theme Installation Help (₹400 one-time)" },
+      { id: "pluginHelp", label: "Plugin Troubleshooting (₹600/month)" },
+    ],
+  },
+  {
+    title: "Add-ons",
+    items: [
+      { id: "autoUpdate", label: "Auto Update Plugins & Themes (₹300/month)" },
+      { id: "stagingSite", label: "Staging Environment (₹900/month)" },
+      { id: "dailyBackupWP", label: "Daily Cloud Backups (₹700/month)" },
+    ],
+  },
+];
+
+
   return (
     <>
         <div className="rts-breadcrumb-area body-bg-2">
@@ -80,6 +116,38 @@ function Page() {
         </div>
       </div>
     </section>
+
+
+
+ <section className=" bg-light" style={{"paddingTop":"110px" , "paddingBottom":"110px"}}>
+                <div className="container">
+                    <h2 className="text-center mb-5 text-black fw-bold">Additional WordPress Hosting Services</h2>
+                    <div className="row g-4">
+                        {wordpressHostingServices.map((section, idx) => (
+                            <div className="col-md-3" key={idx}>
+                                <div className="bg-white  border-4 rounded-3 shadow-md p-4 h-100" style={{"borderLeft":"2px solid #fd5d07"}}>
+                                    <h5 className="fw-bold mb-4 fs-4  text-uppercase ">{section.title}</h5>
+                                    {section.items.map((item) => (
+                                        <div className="form-check mb-2" key={item.id}>
+                                            <input
+                                                className="form-check-input border border-dark bg-transparent shadow-none"
+                                                type="checkbox"
+                                                id={item.id}
+                                            />
+                                            <label className="form-check-label " htmlFor={item.id}>
+                                               <p className='fs-5'> {item.label}</p>
+                                            </label>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                  <div className="d-flex justify-content-center mt-5 ">
+                              <a href="#" className='get-started-btn px-4'>Buy Now</a>
+                            </div>
+            </section>
 
     </>
   )
