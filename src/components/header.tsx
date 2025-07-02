@@ -308,19 +308,19 @@ const Header = () => {
                             {[
                               [
                                 {
-                                  href: "shared-hosting.html",
+                                  href: "/sharedHosting",
                                   icon: "22.svg",
                                   title: "Shared Hosting",
                                   desc: "Manage Shared Hosting",
                                 },
                                 {
-                                  href: "wordpress-hosting.html",
+                                  href: "/wordpressHosting",
                                   icon: "23.svg",
                                   title: "WordPress Hosting",
                                   desc: "WordPress Hosting speed",
                                 },
                                 {
-                                  href: "vps-hosting.html",
+                                  href: "/vpsHosting",
                                   icon: "24.svg",
                                   title: "VPS Hosting",
                                   desc: "Dedicated resources",
@@ -328,19 +328,19 @@ const Header = () => {
                               ],
                               [
                                 {
-                                  href: "reseller-hosting.html",
+                                  href: "resellerHosting",
                                   icon: "25.svg",
                                   title: "Reseller Hosting",
                                   desc: "Earn additional revenue",
                                 },
                                 {
-                                  href: "dedicated-hosting.html",
+                                  href: "dedicatedHosting",
                                   icon: "27.svg",
                                   title: "Dedicated Hosting",
                                   desc: "Hosting that gives you tools",
                                 },
                                 {
-                                  href: "cloud-hosting.html",
+                                  href: "cloudHosting",
                                   icon: "29.svg",
                                   title: "Cloud Hosting",
                                   desc: "Manage Cloud Hosting",
