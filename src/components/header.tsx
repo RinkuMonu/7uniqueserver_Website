@@ -161,9 +161,8 @@ const Header = () => {
                               <div className="homemenu-content text-center">
                                 <h4 className="homemenu-title">
                                   <Link
-                                    href={`/index${
-                                      i === 1 ? "" : `-${i}`
-                                    }.html`}
+                                    href={`/index${i === 1 ? "" : `-${i}`
+                                      }.html`}
                                   >
                                     Home 0{i}
                                   </Link>
@@ -344,6 +343,64 @@ const Header = () => {
                                   icon: "29.svg",
                                   title: "Cloud Hosting",
                                   desc: "Manage Cloud Hosting",
+                                },
+                              ],
+                            ].map((column, colIndex) => (
+                              <div className="col-lg-6" key={colIndex}>
+                                <ul className="mega-menu-item">
+                                  {column.map((item, idx) => (
+                                    <li key={idx}>
+                                      <Link href={item.href}>
+                                        <Image
+                                          src={`/images/mega-menu/${item.icon}`}
+                                          alt="icon"
+                                          width={40}
+                                          height={40}
+                                        />
+                                        <div className="info">
+                                          <p>{item.title}</p>
+                                          <span>{item.desc}</span>
+                                        </div>
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    {/* Server Mega Menu */}
+                    <li className="menu-item elitehost-has-dropdown mega-menu">
+                      <Link
+                        href="#"
+                        className="elitehost-dropdown-main-element"
+                      >
+                        Server
+                      </Link>
+                      <div className="rts-mega-menu">
+                        <div className="wrapper">
+                          <div className="row g-0">
+                            {[
+                              [
+                                {
+                                  href: "/dedicatedserver",
+                                  icon: "27.svg",
+                                  title: "Dedicated Server",
+                                  desc: "Full control & performance",
+                                },
+                                {
+                                  href: "/vpsserver",
+                                  icon: "28.svg",
+                                  title: "Vps Server",
+                                  desc: "Powerful Vps Server",
+                                },
+                                {
+                                  href: "/cloudserver",
+                                  icon: "30.svg",
+                                  title: "Cloud Server",
+                                  desc: "Optimized for Cloud",
                                 },
                               ],
                             ].map((column, colIndex) => (
